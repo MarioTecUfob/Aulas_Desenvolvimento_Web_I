@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<!--
+    Define que este documento utiliza HTML5.
+-->
+
+<html lang="pt-br">
+
+<head>
+
+    <!--
+        Define a codificação de caracteres da página como UTF-8.
+        Isso permite exibir corretamente acentos, cedilha,
+        símbolos e outros caracteres.
+    -->
+    <meta charset="UTF-8">
+
+    <!--
+        Configura a página para se adaptar ao tamanho da tela
+        do dispositivo.
+
+        width=device-width:
+        utiliza a largura disponível na tela.
+
+        initial-scale=1.0:
+        define o nível inicial de zoom da página.
+    -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <!--
+        Define o favicon da página.
+
+        rel="icon":
+        informa ao navegador que o arquivo será utilizado
+        como ícone da página.
+
+        href:
+        informa o caminho do arquivo.
+
+        type="image/png":
+        informa que o arquivo utilizado está no formato PNG.
+    -->
+    <link
+        rel="icon"
+        href="favicon_html.png"
+        type="image/png">
+
+    <!--
+        Define o título do documento.
+
+        O conteúdo de <title> aparece normalmente
+        na aba do navegador.
+
+        Não confundir:
+
+        <title> → título da aba/documento
+        <h1>    → título principal visível na página
+    -->
+    <title>Tecnologias Web</title>
+
+</head>
+
+
+<body>
+
+    <!--
+        =====================================================
+        HEADER — CABEÇALHO
+        =====================================================
+
+        <header> representa um conteúdo introdutório.
+
+        Pode conter, por exemplo:
+        - título;
+        - logotipo;
+        - texto de apresentação;
+        - menu de navegação.
+    -->
+    <header>
+
+        <!--
+            <h1> representa o título principal da página.
+
+            Normalmente utilizamos o <h1> para identificar
+            o assunto principal do documento.
+        -->
+        <h1>Tecnologias Web</h1>
+
+        <!--
+            <p> representa um parágrafo.
+        -->
+        <p>
+            Exemplos de imagens utilizadas em uma página HTML.
+        </p>
+
+    </header>
+
+
+    <!--
+        =====================================================
+        MAIN — CONTEÚDO PRINCIPAL
+        =====================================================
+
+        <main> representa o conteúdo principal e específico
+        desta página.
+
+        Neste exemplo, o conteúdo principal foi dividido
+        em seções sobre HTML, CSS e JavaScript.
+    -->
+    <main>
+
+
+        <!--
+            =================================================
+            SEÇÃO HTML
+            =================================================
+
+            <section> representa uma seção temática.
+
+            Utilizamos uma section quando queremos agrupar
+            conteúdos relacionados a um mesmo assunto.
+        -->
+        <section>
+
+            <!--
+                <h2> representa um subtítulo.
+
+                Como "HTML" é um assunto dentro do tema
+                principal "Tecnologias Web", utilizamos <h2>.
+            -->
+            <h2>HTML</h2>
+
+            <p>
+                Carregando uma imagem que está na mesma
+                pasta do arquivo HTML.
+            </p>
+
+
+            <!--
+                <figure> agrupa uma figura e o conteúdo
+                relacionado a ela.
+
+                Pode ser utilizada para agrupar:
+                - imagens;
+                - gráficos;
+                - diagramas;
+                - ilustrações;
+                - outros conteúdos autocontidos.
+
+                Neste exemplo, ela agrupa a imagem
+                e sua legenda.
+            -->
+            <figure>
+
+                <!--
+                    <img> insere uma imagem na página.
+
+                    src:
+                    informa onde o navegador deve procurar
+                    o arquivo da imagem.
+
+                    alt:
+                    fornece uma alternativa textual adequada
+                    para a imagem.
+
+                    Neste caso:
+
+                    src="logo_html_200.png"
+
+                    Como informamos apenas o nome do arquivo,
+                    o navegador procurará a imagem na mesma
+                    pasta em que está o documento HTML.
+                -->
+                <img
+                    src="logo_html_200.png"
+                    alt="Logotipo do HTML5">
+
+
+                <!--
+                    <figcaption> fornece uma legenda visível
+                    relacionada ao conteúdo da <figure>.
+
+                    IMPORTANTE:
+
+                    alt e figcaption possuem funções diferentes.
+
+                    alt:
+                    alternativa textual da imagem.
+
+                    figcaption:
+                    legenda visível associada à figura.
+                -->
+                <figcaption>
+                    Logotipo do HTML5
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!--
+            =================================================
+            SEÇÃO CSS
+            =================================================
+        -->
+        <section>
+
+            <h2>CSS</h2>
+
+            <p>
+                Carregando uma imagem que está dentro
+                de uma subpasta.
+            </p>
+
+            <figure>
+
+                <!--
+                    Aqui temos outro exemplo de caminho relativo:
+
+                    src="imagens/logo_css200.png"
+
+                    Isso significa:
+
+                    1. partir da localização do arquivo HTML;
+                    2. entrar na pasta "imagens";
+                    3. procurar o arquivo "logo_css200.png".
+
+                    Estrutura esperada:
+
+                    projeto/
+                    │
+                    ├── index.html
+                    ├── logo_html_200.png
+                    │
+                    └── imagens/
+                        └── logo_css200.png
+                -->
+                <img
+                    src="imagens/logo_css200.png"
+                    alt="Logotipo do CSS3">
+
+                <figcaption>
+                    Logotipo do CSS3
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!--
+            =================================================
+            SEÇÃO JAVASCRIPT
+            =================================================
+        -->
+        <section>
+
+            <h2>JavaScript</h2>
+
+            <p>
+                Carregando uma imagem externa utilizando
+                uma URL.
+            </p>
+
+            <figure>
+
+                <!--
+                    Neste exemplo, o atributo src não aponta
+                    para um arquivo do nosso projeto.
+
+                    Ele contém uma URL completa.
+
+                    Isso significa que a imagem está hospedada
+                    em outro servidor na Internet.
+
+                    Para exibir a imagem, o navegador precisa
+                    acessar esse endereço externo.
+
+                    ATENÇÃO:
+
+                    Encontrar uma imagem na Internet não
+                    significa que podemos utilizá-la livremente.
+
+                    É necessário observar:
+                    - direitos autorais;
+                    - licença de uso;
+                    - origem da imagem.
+
+                    Além disso, uma imagem externa pode deixar
+                    de funcionar caso seja removida ou tenha
+                    seu endereço alterado.
+                -->
+                <img
+                    src="https://cdn-icons-png.magnific.com/256/1199/1199124.png?semt=ais_white_label"
+                    alt="Logotipo do JavaScript">
+
+                <figcaption>
+                    Logotipo do JavaScript
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+    </main>
+
+
+    <!--
+        =====================================================
+        FOOTER — RODAPÉ
+        =====================================================
+
+        <footer> representa informações de rodapé.
+
+        Pode conter, por exemplo:
+        - autoria;
+        - informações institucionais;
+        - direitos autorais;
+        - contatos;
+        - links relacionados.
+    -->
+    <footer>
+
+        <p>
+            Desenvolvimento Web I — 2026
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
