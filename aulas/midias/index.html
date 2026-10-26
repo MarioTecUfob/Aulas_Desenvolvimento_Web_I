@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- Define o idioma principal do documento como português do Brasil. -->
+<html lang="pt-br">
+<head>
+    <!-- Permite exibir corretamente caracteres acentuados. -->
+    <meta charset="UTF-8">
+
+    <!-- Ajusta a área de visualização para diferentes dispositivos. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML</title>
+</head>
+<body>
+    <!-- Cabeçalho com o título e a apresentação da página. -->
+    <header>
+        <h1>Imagens dinâmicas, links para download, áudio e vídeo</h1>
+        <p>Estudando multimídia</p>
+    </header>
+
+    <!-- Conteúdo principal da página. -->
+    <main>
+        <!-- EXEMPLO 1: links para baixar arquivos locais. -->
+        <section>
+            <h2>Links para download</h2>
+
+            <!-- A lista não ordenada agrupa os links de download. -->
+            <ul>
+                <li>
+                    <!-- href: caminho do arquivo; download: nome sugerido ao salvar;
+                         type: dica do tipo MIME (não força o download). -->
+                    <a href="imagens/logo-if.png" download="logo-if.png" type="image/png">
+                        Baixar logo do IF - SBF
+                    </a>
+                </li>
+                <li>
+                    <!-- application/pdf identifica um documento PDF. -->
+                    <a href="arquivos/exemplo.pdf" download="exemplo.pdf" type="application/pdf">
+                        Baixar livro em PDF
+                    </a>
+                </li>
+                <li>
+                    <!-- application/zip identifica um arquivo compactado ZIP. -->
+                    <a href="arquivos/exemplo.zip" download="exemplo.zip" type="application/zip">
+                        Baixar livro em ZIP
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- EXEMPLO 2: escolha de imagens conforme a largura da tela. -->
+        <section>
+            <h2>Imagens adaptativas</h2>
+            <p>Tente abrir este site em diferentes dispositivos ou
+               aumente e diminua o tamanho da janela do navegador.</p>
+
+            <!-- picture permite selecionar uma imagem diferente conforme as condições. -->
+            <picture>
+                <!-- Até 750 px: utiliza a imagem pequena (P). -->
+                <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+
+                <!-- De 751 px até 1050 px: utiliza a imagem média (M). -->
+                <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+
+                <!-- Acima de 1050 px, ou sem suporte a picture: imagem grande (G).
+                     O alt descreve o conteúdo da imagem para acessibilidade;
+                     substitua pelo que a fotografia realmente apresenta. -->
+                <img src="imagens/foto-g.png" alt="Fotografia ilustrativa do exemplo de imagens adaptativas">
+            </picture>
+        </section>
+
+        <!-- EXEMPLO 3: reprodução de áudio com formatos alternativos. -->
+        <section>
+            <h2>Reproduzindo áudio</h2>
+            <p>Reproduzindo áudio em HTML5</p>
+
+            <!-- controls: mostra os controles de reprodução.
+                 preload="metadata": sugere carregar dados como a duração.
+                 Sem autoplay: o usuário escolhe quando iniciar o áudio. -->
+            <audio preload="metadata" controls>
+                <!-- O navegador tenta utilizar uma das fontes compatíveis, na ordem. -->
+                <source src="audio/musica.ogg" type="audio/ogg">
+                <source src="audio/musica.wav" type="audio/wav">
+                <source src="audio/pressao.mpeg" type="audio/mpeg">
+
+                <!-- Conteúdo alternativo para navegadores sem suporte a <audio>.
+                     O arquivo musica.mp3 precisa existir para o link funcionar. -->
+                <p>
+                    Seu navegador não suporta o elemento de áudio.
+                    <a href="audio/musica.mp3" download>Baixar arquivo de áudio</a>
+                </p>
+            </audio>
+            <!-- IMPORTANTE: em um uso real, cada <source> deve oferecer o MESMO
+                 áudio em formatos diferentes. Verifique se pressao.mpeg é uma
+                 versão equivalente de musica.ogg e musica.wav. -->
+        </section>
+
+        <!-- EXEMPLO 4: vídeo local, imagem de capa e formatos alternativos. -->
+        <section>
+            <h2>Inserindo vídeos hospedados localmente</h2>
+
+            <!-- width="500": largura de exibição em pixels CSS.
+                 poster: imagem exibida como capa antes da reprodução.
+                 controls: apresenta os controles do player. -->
+            <video width="500" poster="imagens/logo-if.png" controls>
+                <!-- Primeira opção: vídeo MP4. -->
+                <source src="video/13407069_3840_2160_24fps.mp4" type="video/mp4">
+
+                <!-- Segunda opção: MOV (QuickTime). O suporte em navegadores
+                     é limitado; prefira WebM como alternativa ao MP4. -->
+                <source src="video/girllistensong1.mov" type="video/quicktime">
+
+                <!-- Mensagem para navegadores sem suporte ao elemento <video>. -->
+                <p>Seu navegador não suporta o elemento de vídeo HTML5.</p>
+            </video>
+            <!-- IMPORTANTE: os dois arquivos de <source> devem conter o mesmo
+                 vídeo, em formatos alternativos, para garantir equivalência. -->
+        </section>
+    </main>
+
+    <!-- Rodapé da página. -->
+    <footer>
+        <p>Desenvolvimento Web I — 2026</p>
+    </footer>
+</body>
+</html>
