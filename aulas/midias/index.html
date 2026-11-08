@@ -114,6 +114,34 @@
             <!-- IMPORTANTE: os dois arquivos de <source> devem conter o mesmo
                  vídeo, em formatos alternativos, para garantir equivalência. -->
         </section>
+        <section>    
+    <h2>Incorporação de vídeos externos</h2>    <!--A tag <iframe> é utilizada para incorporar conteúdos de outros sites (como o YouTube) 
+      diretamente na nossa página Web.
+    -->
+    <iframe 
+        /* 1. DIMENSÕES DO PLAYER */
+        width="560" 
+        height="315" 
+
+        /* 2. FONTE DO CONTEÚDO (URL do vídeo no formato embed) */
+        src="https://www.youtube.com/embed/OzUnqQk4eOg?si=x26whp6dfj3tS2O9" 
+
+        /* 3. ACESSIBILIDADE */
+        title="YouTube video player" 
+
+        /* 4. ESTILIZAÇÃO E BORDAS */
+        frameborder="0" 
+
+        /* 5. PERMISSÕES DE RECURSOS E FUNCIONALIDADES DO NAVEGADOR */
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+
+        /* 6. SEGURANÇA E PRIVACIDADE DA ORIGEM DA REQUISIÇÃO */
+        referrerpolicy="strict-origin-when-cross-origin" 
+
+        /* 7. RECURSO DE TELA CHEIA */
+        allowfullscreen>
+    </iframe>
+</section>
     </main>
 
     <!-- Rodapé da página. -->
